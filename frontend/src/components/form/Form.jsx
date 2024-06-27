@@ -1,23 +1,28 @@
+import Button from "../button/Button.jsx";
+import InputWrapper from "../inputWrapper/InputWrapper.jsx";
 
 function Form() {
     return (
         <form>
-        <div class="input-wrapper">
-          <label for="username">Username</label>
-          <input type="text" id="username" />
-        </div>
-        <div class="input-wrapper">
-          <label for="password">Password</label>
-          <input type="password" id="password" />
-        </div>
+        <InputWrapper
+                id="username"
+                label="Username"
+                type="text"
+            />
+            <InputWrapper
+                id="password"
+                label="Password"
+                type="password"
+            />
         <div class="input-remember">
           <input type="checkbox" id="remember-me" /><label for="remember-me">
                 Remember me</label>
         </div>
-       
-        <a href="./" class="sign-in-button">Sign In</a>
-       
-      {/* <button class="sign-in-button">Sign In</button>  */}
+        <Button
+          className="sign-in-button"
+          type="submit"
+          txt="Sign In"            
+        />
         
       </form>   
 
