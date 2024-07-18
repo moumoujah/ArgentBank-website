@@ -1,4 +1,4 @@
-import LogoArgentBank from "../../assets/argentBankLogo.png";
+import LogoArgentBank from "./argentBankLogo.png";
 import { NavLink } from 'react-router-dom';
 
 function Header() {
