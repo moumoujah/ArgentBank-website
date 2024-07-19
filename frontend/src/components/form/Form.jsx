@@ -14,7 +14,7 @@ function Form() {
                 label="Password"
                 type="password"
             />
-        <div class="input-remember">
+        <div className="input-remember">
           <input type="checkbox" id="remember-me" /><label for="remember-me">
                 Remember me</label>
         </div>
