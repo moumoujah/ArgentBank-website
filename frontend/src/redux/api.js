@@ -17,4 +17,21 @@ export const fetchLoginUser = async (email, password) => {
     catch (err) {
         console.error(err);
     };
-}
+};
+
+// Récupération des données quand l'utilisateur est connecté
+export const fetchProfileUser= async (token) => {
+    try {
+        const response = await fetch(`${apiUrl}user/profile`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+        const data = await response.json();
+        return data;
+    } 
+    catch (err) {
+        console.log(err);
+    }
+};
