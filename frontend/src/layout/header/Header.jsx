@@ -30,7 +30,7 @@ function Header() {
       {token ? (  <div className="nav-signout">
                    <NavLink to ='/user' > 
                    <div className="main-nav-item">
-                     <i className="fa fa-user-circle"></i><div>{userName}</div>
+                     <i className="fa fa-user-circle"></i>{userName}
                      
                    </div>
                    </NavLink>
