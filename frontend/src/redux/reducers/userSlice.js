@@ -16,8 +16,11 @@ const userSlice = createSlice({
             state.lastName = stateProfil.lastName;
             state.userName = stateProfil.userName;
         },
+        setEditName: (state, action) => {
+            state.userName = action.payload;
+        },
     },
 })
 
-export const { setProfileUser } = userSlice.actions
+export const { setProfileUser,setEditName } = userSlice.actions
 export default userSlice.reducer

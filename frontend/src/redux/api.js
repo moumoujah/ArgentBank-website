@@ -35,3 +35,26 @@ export const fetchProfileUser= async (token) => {
         console.log(err);
     }
 };
+
+// Modification du UserName du user connecté pour la page user
+export const putUserName = async (token, newUserName) => {
+    try {
+        const response = await fetch(`${apiUrl}user/profile`, {
+            method: "PUT",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ userName: newUserName }),
+        });
+        
+        if (response.ok) {
+            return true;
+        } else {
+            return false;
+        }
+
+    } catch (err) {
+        console.error(err);
+    }
+};
