@@ -1,7 +1,7 @@
 import Button from "../button/Button.jsx";
 import InputWrapper from "../inputWrapper/InputWrapper.jsx";
 import { fetchLoginUser } from "../../redux/api.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setLogIn } from "../../redux/reducers/authSlice.js";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,7 @@ function Form() {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const [rememberMe, setRememberMe] = useState(false);
 
   // Soumission du formulaire
   const handleSubmit = async (e) => {
@@ -27,6 +27,27 @@ function Form() {
         // Une fois la connexion réussi redirection ver la page user
         navigate("/user") 
     }
+  };
+  
+  // Enregistrement de l'email dans le storage si la checkbox est coché
+  useEffect(() => {
+    const storageEmail = localStorage.getItem("rememberMe");
+    if (storageEmail) {
+        setEmail(storageEmail);
+        setRememberMe(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (rememberMe) {
+        localStorage.setItem("rememberMe", email);
+    } else {
+        localStorage.removeItem("rememberMe");
+    }
+  }, [rememberMe, email]);
+
+  const handleCheckBox = (e) => {
+    setRememberMe(e.target.checked);
   };
 
 
@@ -47,8 +68,9 @@ function Form() {
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="current-password"
             />
-        <div className="input-remember">
-          <input type="checkbox" id="remember-me" /><label for="remember-me">
+          <div className="input-remember">
+          <input type="checkbox" id="remember-me" checked={rememberMe} onChange={handleCheckBox}  />
+          <label for="remember-me">
                 Remember me</label>
         </div>
         <Button
@@ -58,7 +80,6 @@ function Form() {
         />
         
       </form>   
-
 )
              }
 
