@@ -28,6 +28,12 @@ body {
 .nav-signout{
   display: flex;
 } 
+.btn-save-cancel{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
@@ -61,7 +67,9 @@ body {
 
 .main-nav-item {
   text-decoration: none;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
+  display: flex;
+  gap: 5px;
 }
 
 .main-nav-item:hover {

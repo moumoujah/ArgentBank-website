@@ -30,7 +30,7 @@ function FormUserName() {
 
         const valueInput = document.querySelector('input#userName');
         if (!valueInput.value) {
-            alert("Le champ est vide saisissez un nouvel user name");
+            alert("The field is empty enter a new user name");
             return;
         }
         const onSuccess = await putUserName(token, newUserName);
@@ -67,7 +67,7 @@ function FormUserName() {
                             value={user.lastName}
                             disabled={true}
                         />
-                        <div>
+                        <div className="btn-save-cancel">
                         <Button
                             className="edit-button"
                             type="submit"

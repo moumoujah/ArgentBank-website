@@ -18,7 +18,11 @@ body {
 .main {
   flex: 1;
 }
-
+.btn-save-cancel{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 .bg-dark {
   background-color: #12002b;
 }
@@ -55,7 +59,9 @@ body {
 
 .main-nav-item {
   text-decoration: none;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
+  display: flex;
+  gap: 5px;
 }
 
 .main-nav-item:hover {

@@ -7,10 +7,15 @@ export const fetchLoginUser = async (email, password) => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
-        })
-        if (response.status === 400) {    //Alerte si une erreur de saisie email ou mot de passe
-            alert("Mail ou mot de passe invalide");
-        } 
+        })  
+        
+        
+        if (response.status === 400) {//Alerte si une erreur de saisie email ou mot de passe
+            alert("Invalid Fields");
+        } if (response.status === 500) {//Alerte si une erreur server
+            alert("Internal Server Error");
+        }
+
         const data = await response.json();
         return data;
     } 

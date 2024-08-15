@@ -1,9 +1,6 @@
 
-
-
 function FeatureItem({ src, alt, title, text }) {
     
-   
     return (
         <div className="feature-item">
             <img src={`assets/${src}`} alt={alt} className="feature-icon" />
@@ -12,7 +9,6 @@ function FeatureItem({ src, alt, title, text }) {
         </div>
         
         )
-    
 }
 
 

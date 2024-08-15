@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from "../../components/hero/Hero.jsx";
 import { getAllFeature } from '../../services/feature.js'
 import FeatureItem from "../../components/featureItem/FeatureItem.jsx";
+
 function Home() {
   const feature = getAllFeature();
 
