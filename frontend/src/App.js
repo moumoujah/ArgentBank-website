@@ -3,8 +3,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Home from './pages/home/Home.jsx';
 // import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import SingIn from './pages/signIn/SignIn.jsx';
-import User from './pages/user/User.jsx';
+import Login from './pages/login/Login.jsx';
+import Profile from './pages/profile/Profile.jsx';
 import Error from './pages/error/Error.jsx';
 
 
@@ -16,8 +16,8 @@ function App() {
                 {/* <Route path='*' element={<Home />}/> */}
                 <Route path="*" element={<Error />}/>
                 <Route path="/" element={<Home />}/>
-                <Route path="/sign-in" element={<SingIn />}/>
-                <Route path="/user" element={token ? <User /> : <SingIn />}/>
+                <Route path="/Login" element={<Login />}/>
+                <Route path="/Profile" element={token ? <Profile /> : <Login />}/>
             </Routes>
 
 

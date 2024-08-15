@@ -25,7 +25,7 @@ function Form() {
         const token = fetchDataLogin.body.token;
         dispatch(setLogIn({ token }))
         // Une fois la connexion réussi redirection ver la page user
-        navigate("/user") 
+        navigate("/Profile") 
     }
   };
   

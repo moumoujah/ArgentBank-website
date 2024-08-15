@@ -1,8 +1,8 @@
 import React from 'react';
 import LoginForm from '../../components/form/Form.jsx';
 
-function SignIn() {
-    document.title = "Argent Bank - Sign In"
+function Login() {
+    document.title = "Argent Bank - Login"
     return (
 
       <main className="main bg-dark">
@@ -15,4 +15,4 @@ function SignIn() {
   )
 }
 
-export default SignIn
+export default Login

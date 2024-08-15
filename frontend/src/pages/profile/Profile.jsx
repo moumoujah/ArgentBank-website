@@ -3,7 +3,8 @@ import { getAllAccount } from '../../services/account.js'
 import Account from "../../components/account/Account.jsx";
 import FormUserName from "../../components/formUserName/FormUserName.jsx"
 
-function User() {
+function Profile() {
+  document.title = "Argent Bank - Profile"
   const account = getAllAccount(); 
 
     return (
@@ -25,4 +26,4 @@ function User() {
     )
 }
 
-export default User
+export default Profile

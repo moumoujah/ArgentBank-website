@@ -28,7 +28,7 @@ function Header() {
       </div>
       </NavLink>
       {token ? (  <div className="nav-signout">
-                   <NavLink to ='/user' > 
+                   <NavLink to ='/Profile' > 
                    <div className="main-nav-item">
                      <i className="fa fa-user-circle"></i>{userName}
                      
@@ -43,7 +43,7 @@ function Header() {
                    </div>
                    
                 ) : (
-                  <NavLink to ='/sign-in' > 
+                  <NavLink to ='/Login' > 
                   <div className="main-nav-item">
                     <i className="fa fa-user-circle"></i>
                     Sign In
